@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPF_INotifyPropertyChanged.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_INotifyPropertyChanged"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450"
+        Width="800">
+    <!--
+    Creacion de TRES TextBox que recibiran gracias al 
+    Binding cada uno una propiedad que almacenaran un string
+    y cuando haga un cambio en cada uno de los TextBox se veran
+    reflejado en dicho TextBox
+    -->
+    <StackPanel VerticalAlignment="Center">
+        <Label HorizontalAlignment="Center"
+               Content="Nombre"
+               FontSize="20" />
+        <TextBox Width="150"
+                 Text="{Binding Path=Nombre, Mode=TwoWay}" />
+        <Label HorizontalAlignment="Center"
+               Content="Apellido"
+               FontSize="20" />
+        <TextBox Width="150"
+                 Text="{Binding Path=Apellido, Mode=TwoWay}" />
+        <Label HorizontalAlignment="Center"
+               Content="Nombre y apellido"
+               FontSize="20" />
+        <TextBox Width="150"
+                 Text="{Binding Path=NombreApellido, Mode=TwoWay}" />
+    </StackPanel>
+
+
+</Window>
